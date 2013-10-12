@@ -12,5 +12,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "php.sh"
   config.vm.network :forwarded_port, host: 80, guest: 8080
   config.vm.network :forwarded_port, host: 22000, guest: 22
-  
+  config.vm.network :forwarded_port, host: 21, guest: 21000
 end
