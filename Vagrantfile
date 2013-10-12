@@ -7,7 +7,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu32"
   config.vm.provision :shell, :path => "bootstrap.sh"
-  config.vm.network :forwarded_port, host: 80, guest: 8080
-  config.vm.network :forwarded_port, host: 22000, guest: 22
+  config.vm.network :forwarded_port, host: 8080, guest: 80
   
 end
